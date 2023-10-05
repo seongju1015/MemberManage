@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+    <h2>{ 전산전자 공학부 인적사항 기입 페이지 }</h2>
+    <form action="form_ok.php">
+
+        <div class="gender_page">
+            <label for="gender">[ 성별 ]</label><br>
+            <label for="gender">male </label>
+            <input type="radio" name="user_gender" value="male">
+            <label for="gender">female </label>
+            <input type="radio" name="user_gender" value="female"><br>
+            <br>
+        </div>
+
+        <div class="major">
+            <label>[ 전공 ]</label><br>
+            <label>전산전자 공학부(필수 체크)</label>
+            <input type="checkbox" name="user_major" value="both" checked><br>
+            <label>=> Ai 컴퓨터공학 심화</label>
+            <input type="radio" name="user_major" value="only_computer">
+            <label> 전자공학 심화</label>
+            <input type="radio" name="user_major" value="only_electronic"><br>
+            <br>
+        </div>
+
+        <div class="name_page">
+            <fieldset>
+                <legend>[ 이름 ]</legend>
+                    <label>FirstName : </label>
+                    <input type="text" name="fname" value="성"> 
+                    <label>Name :  </label>
+                    <input type="text" name="name" value="이름"> <br>
+                    <br>
+            </fieldset><br>
+        </div>
+
+        <div class="region">
+            <label>[ 현재 거주 지역 ]</label><br>
+            <select name="city">
+                <optgroup label="포항시">
+                    <option value ="1">양덕동</option>
+                    <option value ="1">흥해읍(기숙사)</option>
+                    <option value ="1">장성동</option>
+                    <option value ="1">두호동</option>
+                </optgroup>
+                <br>
+            </select>
+        </div>
+
+        <div className="birthday"><br>
+            <label>[ 생년월일 ]</label>
+            <input type ='date' min='1997-01-01' max='2006-12-31' name = 'birthdya_date'>
+        </div><br>
+
+        <div className="specialThing">
+            <label >[ 특이사항 기입 ]</label><br>
+            <textarea name="special" rows=20 cols=40></textarea><br>
+
+        </div><br>
+
+        <div className ="final">
+            <input type = 'submit' value = '추가' onclick="addAlert()">
+            <input type = 'reset'  style="color: red" value = '취소'>
+            
+        </div>
+
+    </form>
+
+    <script>
+        function addAlert(){
+            alert("게시물이 추가됩니다");
+        }
+    </script>
+</body>
+</html>
