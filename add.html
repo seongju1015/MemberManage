@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="add.css">
 </head>
 <body>
-    <h2>{ 전산전자 공학부 인적사항 기입 페이지 }</h2>
+    <div class="header">
+        <h2> 전산전자 공학부 인적사항 기입 페이지 </h2><br>
+    </div>
     <form id="sForm" method="post" action="form_ok.php" onsubmit="return isValid()">
 
         <div class="gender_page">
@@ -27,9 +29,9 @@
             <br>
         </div>
 
-        <div class="student_symester">
-            <label>[ 학기수 ]</label>
-            <input type="text" name="symester" required>
+        <div class="student_number">
+            <label>[ Student Number ]</label>
+            <input type="text" name="number" required>
             <br>
         </div><br>
 
@@ -37,11 +39,11 @@
             <fieldset>
                 <legend>[ 이름 ]</legend>
                     <label>FirstName : </label>
-                    <input type="text" name="fname" value="성" required> 
+                    <input type="text" name="fname" value="성">
                     <label>Name :  </label>
-                    <input type="text" name="name" value="이름" required> <br>
+                    <input type="text" name="name" value="이름"> <br>
                     <br>
-            </fieldset><br>
+            </fieldset>
         </div>
 
         <div class="region">
@@ -63,18 +65,14 @@
         </div><br>
 
         <div className ="final">
-            <input type = 'submit' value = '추가' onclick="addAlert()">
+            <input type = 'submit' value = '추가' >
             <input type = 'reset'  style="color: red" value = '취소'>
             
         </div>
 
     </form>
 
-    <script>
-        function addAlert(){
-            alert("게시물이 추가됩니다");
-            document.getElemnetById("student.form").submit;
-        }
+    <script>  
         
         function isValid(){
             var result = true;
@@ -108,9 +106,9 @@
                 result = true;
             }
             
-            var first_name;
-            var name;
-            var birth;
+            if(result == true){
+                alert("게시물이 추가됩니다.");
+            }
 
             return result;
         }
