@@ -127,7 +127,7 @@
 
         <div class="student_number">
             <label>[ Student Number ]</label>
-            <input type="text" name="number" required>
+            <input type="text" id="number" >
             <br>
         </div><br>
 
@@ -154,7 +154,7 @@
 
         <div className="birthday"><br>
             <label>[ 생년월일 ]</label>
-            <input type ='date' min='1997-01-01' max='2006-12-31' id = 'birthday_date' required>
+            <input type ='date' min='1997-01-01' max='2006-12-31' id = 'birthday_date' >
         </div><br>
 
         <div className ="final">
@@ -231,9 +231,19 @@
             else{
                 result = true;
             }
+
+            var birthday_input=document.getElementById("birthday_date").value;
+            if(!birthday_input){
+                alert("생년월일을 입력하시오")
+                result = false;
+                return result;
+            }
+            else{
+                result = true;
+            }
             
             if(result == true){
-                alert("게시물이 추가됩니다.");
+                alert("게시물이 수정됩니다.");
             }
 
             return result;
