@@ -39,6 +39,11 @@
     .nav-link{
         color:#fff;
     }
+    #delete_button{
+        color:red;
+        float:right;
+        margin-right: 4%;
+    }
     
 }
 
@@ -85,5 +90,8 @@
     }
     .nav-link{
         color:#fff;
+    }
+    #delete_button{
+        color:red;
     }
 }

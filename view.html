@@ -24,96 +24,53 @@
         <a class="navbar-brand" href="index.html">학생정보 리스트</a>
         <a class="navbar-brand" id="view_page" href="edit.html">Edit</a>
       </div>
-    <div class="table-responsive">
-        <table class="table table-striped table-sm">
-          <thead>
-            <tr>
-              <th>학번</th>
-              <th>이름</th>
-              <th>전공</th>
-              <th>성별</th>
-              <th>거주지역</th>
-              <th>생년월일</th>
-              <th>menu</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>22000011</td>
-              <td>김광일</td>
-              <td>Ai컴퓨터공학심화</td>
-              <td>남</td>
-              <td>흥해읍(기숙사)</td>
-              <td>2001.01.27</td>
-              <td><a class="navbar-brand" id="delete_page" href="index.html" onclick="return deleteMessage()">❌</a></td>
-            </tr>
-            <tr>
-              <td>22000523</td>
-              <td>이성주</td>
-              <td>Ai컴퓨터공학심화</td>
-              <td>남</td>
-              <td>흥해읍(기숙사)</td>
-              <td>2001.10.15</td>
-              <td><a class="navbar-brand" id="delete_page" href="index.html" onclick="return deleteMessage()">❌</a></td>
-            </tr>
-            <tr>
-              <td>22000445</td>
-              <td>심성환</td>
-              <td>Ai컴퓨터공학심화</td>
-              <td>여</td>
-              <td>양덕동</td>
-              <td>2001.09.23</td>
-              <td><a class="navbar-brand" id="delete_page" href="index.html" onclick="return deleteMessage()">❌</a></td>
-            </tr>
-            <tr>
-              <td>22000589</td>
-              <td>이준혁</td>
-              <td>Ai컴퓨터공학심화</td>
-              <td>남</td>
-              <td>양덕동</td>
-              <td>2001.07.17</td>
-              <td><a class="navbar-brand" id="delete_page" href="index.html" onclick="return deleteMessage()">❌</a></td>
-            </tr>
-            <tr>
-              <td>22000184</td>
-              <td>공호중</td>
-              <td>전자공학심화</td>
-              <td>여</td>
-              <td>흥해읍(기숙사)</td>
-              <td>2001.03.09</td>
-              <td><a class="navbar-brand" id="delete_page" href="index.html" onclick="return deleteMessage()">❌</a></td>
-            </tr>
-            <tr>
-              <td>22000104</td>
-              <td>김성은</td>
-              <td>Ai컴퓨터공학심화</td>
-              <td>남</td>
-              <td>흥해읍(기숙사)</td>
-              <td>2001.04.14</td>
-              <td><a class="navbar-brand" id="delete_page" href="index.html" onclick="return deleteMessage()">❌</a></td>
-            </tr>
-            <tr>
-              <td>22000094</td>
-              <td>김동규</td>
-              <td>Ai컴퓨터공학심화</td>
-              <td>남</td>
-              <td>양덕동</td>
-              <td>2001.12.31</td>
-              <td><a class="navbar-brand" id="delete_page" href="index.html" onclick="return deleteMessage()">❌</a></td>
-            </tr>
-            <tr>
-              <td>22000015</td>
-              <td>강병우</td>
-              <td>전자공학심화</td>
-              <td>여</td>
-              <td>흥해읍(기숙사)</td>
-              <td>2001.05.20</td>
-              <td><a class="navbar-brand" id="delete_page" href="delete.html" onclick="return deleteMessage()">❌</a></td>
-            </tr>
+      <form class="needs-validation" novalidate="">
+        <div class="row g-3">
+
+          <div class="col-sm-6">
+            <label for="address" class="form-label">학번</label>
+            <input type="text" class="form-control" id="address" value="22000015" disabled>
+          </div>
+
+          <div class="col-12">
+            <label for="firstName" class="form-label">Name</label>
+            <input type="text" class="form-control" id="firstName" placeholder="" value="김광일" disabled>
+            
+          </div>
+
+          <div class="col-sm-6">
+            <label for="username" class="form-label">전공</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text">학부</span>
+              <input type="text" class="form-control" id="username" value="전산전자공학부" disabled>
         
-          </tbody>
-        </table>
-      </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <label for="email" class="form-label"> 세부 전공 </label>
+            <input type="email" class="form-control" id="email" value="Ai컴퓨터공학심화" disabled> 
+          </div>
+
+          <div class="col-sm-6">
+            <label for="address" class="form-label">성별</label>
+            <input type="text" class="form-control" id="address" value="남" disabled>
+          </div>
+
+          <div class="col-12">
+            <label for="address2" class="form-label"> 현재 거주 지역 </label>
+            <input type="text" class="form-control" id="address2" value="흥해읍(기숙사)" disabled>
+          </div>
+
+          <div class="col-12">
+            <label for="address2" class="form-label"> 생년월일 </label>
+            <input type="text" class="form-control" id="address2" value="2001-01-25" disabled>
+          </div>
+
+          <td><a class="navbar-brand" href="index.html" onclick="return deleteMessage()"><button type="button" id="delete_button">Delete ❌</button></a></td>
+
+        <hr class="my-4">
+      </form>
 
       <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
